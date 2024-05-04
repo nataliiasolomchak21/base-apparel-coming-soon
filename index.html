@@ -10,26 +10,36 @@
 </head>
 <body>
   <main>
-    <div>
-      <img src="images/logo.svg" alt="" class="logo" width="150">
-      <img src="images/hero-mobile.jpg" alt="Girl">
-      <div class="container">
-        <h1>We're<span></span> <br>coming soon</h1>
-        <p>Hello fellow shoppers! We're currently building our new fashion store. 
-          Add your email below to stay up-to-date with announcements and our launch deals.</p>
-          <form class="needs-validation form" novalidate>
-            <div class="form-row">
-              <div class="error-box">
-                <input type="email" class="form-control" id="validationCustom03" placeholder="Email Address" required>
-                <div class="invalid-feedback">
-                  <em>Please provide a valid email address</em>
+      <header>
+        <figure class="logo">
+          <img src="images/logo.svg" class="logo" alt="logo" width="100">
+        </figure>
+      </header>
+      <section>
+        <picture>
+          <source media="(max-width: 899px)" class="hero" srcset="images/hero-mobile.jpg">
+          <source media="(min-width: 900px)" class="hero-desktop" srcset="images//hero-desktop.jpg">
+          <img src="assets/img/hero-desktop.jpg" alt="Girl">
+        </picture>
+        <div class="container">
+          <h1><span>We're</span> <br>coming soon</h1>
+          <p>Hello fellow shoppers! We're currently building our new fashion store. 
+            Add your email below to stay up-to-date with announcements and our launch deals.</p>
+            <form class="needs-validation form" novalidate>
+              <div class="form-row">
+                <div class="error-box">
+                  <input type="email" class="form-control" id="validationCustom03" placeholder="Email Address" required>
+                  <div class="invalid-feedback">
+                    <em>Please provide a valid email address</em>
+                  </div>
                 </div>
+                  <button class="submit-btn" type="submit">
+                    <img src="images/icon-arrow.svg" alt="">
+                  </button>
               </div>
-                <button class="submit-btn" type="submit"><symbol id="iconamoon--arrow-right-2-light" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m10 17l5-5l-5-5"/></symbol></button>
-            </div>
-          </form>
-        </div>
-    </div>
+            </form>
+          </div>
+      </section>
   </main>
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
