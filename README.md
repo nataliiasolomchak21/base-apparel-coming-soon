@@ -25,11 +25,11 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./screenshot.jpg)
+![Screenshot](/images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/nataliiasolomchak21/base-apparel-coming-soon](https://github.com/nataliiasolomchak21/base-apparel-coming-soon)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -39,6 +39,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
+
 - Mobile-first workflow
-- Bootstrap
+- Bootstrap 4.6 - [Form validation](https://getbootstrap.com/docs/4.6/components/forms/#validation)

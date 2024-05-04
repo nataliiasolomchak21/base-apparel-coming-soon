@@ -1,132 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 :root {
-    --desaturated-red: hsl(0, 36%, 70%);
-    --soft-red: hsl(0, 93%, 68%);
-    --dark-grayish-red: hsl(0, 6%, 24%);
-    --linear-one: linear-gradient(from hsl(0, 0%, 100%), to hsl(0, 100%, 98%));
-    --linear-two: linear-gradient(from hsl(0, 80%, 86%), to hsl(0, 74%, 74%));
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+  --linear-one: linear-gradient(from hsl(0, 0%, 100%), to hsl(0, 100%, 98%));
+  --linear-two: linear-gradient(from hsl(0, 80%, 86%), to hsl(0, 74%, 74%));
 }
 
 .logo {
-    padding: .5rem;
-    margin-top: .5rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .hero {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .container {
-    padding: 2rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 7px;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 7px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 span {
-    font-weight: 300;
-    color: var(--desaturated-red);
+  font-weight: 300;
+  color: var(--desaturated-red);
 }
 
 p {
-    color: var(--desaturated-red);
-    font-size: 14px;
-    margin-bottom: 2rem;
+  color: var(--desaturated-red);
+  font-size: 13px;
+  margin-bottom: 2rem;
+  min-width: 18rem;
 }
 
 .form-control {
-    width: 19rem;
-    height: 3rem;
-    border-radius: 1.4rem;
-    border-color: var(--desaturated-red);
+  width: 19rem;
+  height: 3rem;
+  border-radius: 1.4rem;
+  border-color: var(--desaturated-red);
+}
+
+.form-control:focus {
+    outline: 2px solid hsl(0, 93%, 68%);
+    outline-offset: -2px;
 }
 
 .form-control::placeholder {
-    font-size: 14px;
-    padding-left: 1rem;
-    color: var(--desaturated-red);
+  font-size: 14px;
+  padding-left: 1rem;
+  color: var(--desaturated-red);
+}
+
+.invalid-feedback p {
+  color: var(--soft-red);
+  font-size: 13px;
 }
 
 .submit-btn {
-    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) 100%);
-    border-color: transparent;
-    width: 4rem;
-    height: 3rem;
-    border-radius: 1.5rem;
-    border-color: transparent;
-    outline-color: transparent;
-    z-index: 100;
-    margin-right: 0;
-    position: absolute;
-    right: 9%;
-    box-shadow: 0 15px 25px hsla(0, 43%, 76%, 0.483);
-    cursor: pointer;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) 100%);
+  border-color: transparent;
+  width: 4rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  border-color: transparent;
+  outline-color: transparent;
+  z-index: 100;
+  margin-right: 0;
+  position: absolute;
+  right: 9%;
+  box-shadow: 0 15px 25px hsla(0, 43%, 76%, 0.483);
+}
+
+.submit-btn:hover {
+  background: hsl(0, 80%, 86%);
+  cursor: pointer;
 }
 
 @media (min-width: 900px) {
-    main {
-        background-image: url(images/bg-pattern-desktop.svg);
-    }
+  main {
+    background-image: url("images/bg-pattern-desktop.svg");
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: flex-start; /* Align content to the top */
+    position: relative; /* Ensure main is a positioned container for absolute positioning */
+  }
 
-    section {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        align-items: center;
-    }
+  header {
+    width: 50%;
+    z-index: 2; /* Ensure header is above hero image */
+    position: relative; /* Create a positioned context for z-index to work */
+  }
 
-    .container {
-        margin-right: 10rem;
-        margin-inline: auto ;
-    }
+  .logo {
+    padding: 2rem;
+    margin-left: 32rem;
+  }
 
-    .container h1,
-    .container p {
-        text-align: left;
-    }
+  section {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
-    .container h1 {
-        font-size: 70px;
-        max-width: 30rem;
-        letter-spacing: 10px;
-    }
+  .hero-desktop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; 
+    z-index: 1; /* Ensure hero image is behind header */
+    object-fit: cover; /* Ensure image covers the space */
+  }
 
-    .container p {
-        max-width: 30rem;
-        font-size: 20px;
-    }
+  .container {
+    margin-right: 15%;
+    z-index: 3; /* Ensure content is above hero image */
+    position: relative; /* Create a positioned context for z-index to work */
+  }
 
-    header {
-        width: 50%;
-    }
+  .container h1 {
+    font-size: 60px;
+    max-width: 30rem;
+    letter-spacing: 15px;
+    text-align: left;
+  }
 
-    .hero-desktop {
-        position: relative;
-        top: 300px;
-        z-index: 100;
-        
-    }
+  .container p {
+    font-size: 16px;
+    text-align: left;
+    width: 27rem;
+    margin-right: 2rem;
+    line-height: 1.7rem;
+  }
 
+  .form-control {
+    width: 27rem;
+    height: 3.4rem;
+    margin-right: 2rem;
+  }
 
+  .invalid-feedback p {
+    color: var(--soft-red);
+    font-size: 14px;
+    padding-left: 1.5rem;
+  }
+
+  .submit-btn {
+    width: 6rem;
+    height: 3.5rem;
+    margin-left: 5rem;
+    border-radius: 1.7rem;
+  }
 }
-
